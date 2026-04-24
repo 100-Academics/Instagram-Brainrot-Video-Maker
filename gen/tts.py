@@ -21,7 +21,7 @@ async def amain(TEXT) -> None:
     voices = await VoicesManager.create()
     voice = voices.find(Gender = "Male", Language = "en")
     voice_for_tts = random.choice(voice)["Name"]
-    print("Voice found. I am " + voice_for_tts + ". Beginning generation...")
+    print("Voice found. I am " + voice_for_tts + " for this run. Beginning generation...")
 
     communicate = edge_tts.Communicate(TEXT, voice_for_tts)
     submaker = edge_tts.SubMaker()
@@ -40,4 +40,7 @@ async def amain(TEXT) -> None:
         file.write(submaker.get_srt())
     
     stdout.write(f"Audio file length: {len(audio_bytes)}\n")
+    print("TTS generation complete. Subtitles saved to " + SRT_FILE + " and audio saved to " + OUTPUT_FILE)
     stdout.write(submaker.get_srt())
+    print("See above for the contents of the SRT file.")
+    print("Done with TTS generation. Beginning video editing process...")
