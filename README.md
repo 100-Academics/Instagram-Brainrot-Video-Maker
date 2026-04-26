@@ -4,21 +4,21 @@ Importantly, it does not post videos on Instagram automatically (yet). That is a
 
 # SETUP
 First, clone the project:
-``git clone https://github.com/100-Academics/Instagram-Brainrot-Video-Maker``
+```git clone https://github.com/100-Academics/Instagram-Brainrot-Video-Maker```
 
 Then, navigate to the folder, and install the necessary requirements:
-``cd "Instagram-Video-Maker"``
-``pip install -r requirements.txt``
+```cd "Instagram-Video-Maker"```
+```pip install -r requirements.txt```
 
 Hook into the .venv:
-``.venv\Scripts\activate`` on Windows (command line) or ``source .venv/bin/activate`` on Linux.
+```.venv\Scripts\activate``` on Windows (command line) or ```source .venv/bin/activate``` on Linux.
 
 Then, run main.py:
-``python main.py`` if you're on Windows, or ``python3 main.py`` if you are on Linux. It will generate a ``.env`` file, as well as any directories necessary, and then raise an error.
+```python main.py``` if you're on Windows, or ```python3 main.py``` if you are on Linux. It will generate a ``.env`` file, as well as any directories necessary, and then raise an error.
 In your .env file, place your NVIDIA API key (``nvapi-``) at the ``NVIDIA_API_KEY=`` variable.
 
 Then, run main.py again:
-``python main.py`` if you're on Windows, or ``python3 main.py`` if you are on Linux.
+```python main.py``` if you're on Windows, or ```python3 main.py``` if you are on Linux.
 This time, it will run fully (it may take several minutes), and will save your final clip to ``video/final/videoXXX``
 
 # OTHER STUFF
